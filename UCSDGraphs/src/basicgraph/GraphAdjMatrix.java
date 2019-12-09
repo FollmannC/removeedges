@@ -51,6 +51,16 @@ public class GraphAdjMatrix extends Graph {
 	 * @param v the index of the start point for the edge.
 	 * @param w the index of the end point for the edge.  
 	 */	
+	
+    /** 
+	 * Implement the abstract method for removing an edge 
+	 */
+	public void implementRemoveEdge(Integer startVertex, Integer endVertex) {
+	    // TODO: you will implement this method
+
+	}
+
+	
 	public void implementAddEdge(int v, int w) {
 		adjMatrix[v][w] += 1;
 	}
