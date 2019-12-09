@@ -246,7 +246,7 @@ public abstract class Graph {
 		
 		System.out.println("****");
 		System.out.println("Roads / intersections:");
-		GraphAdjList graphFromFile = new GraphAdjList();
+		GraphAdjMatrix graphFromFile = new GraphAdjMatrix();
 		GraphLoader.loadRoadMap("data/testdata/simpletest.map", graphFromFile);
 		System.out.println(graphFromFile);
 		
