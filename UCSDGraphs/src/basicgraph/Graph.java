@@ -96,6 +96,22 @@ public abstract class Graph {
 	public abstract void implementAddEdge(int v, int w);
 	
 	/**
+	 * Removes an edge from the graph between given vertices,
+	 * @param startVertex Index of the start point of the edge to be removed. 
+	 * @param endVertex Index of the end point of the edge to be removed. 
+	 */
+	public void removeEdge(Integer startVertex, Integer endVertex) {
+		implementRemoveEdge(startVertex, endVertex);
+		numEdges--;
+	}
+	
+	/**
+	 * Abstract method for implementing removing an edge from the graph.
+	 */
+	public abstract void implementRemoveEdge(Integer startVertex, Integer endVertex);
+
+	
+	/**
 	 * Get all (out-)neighbors of a given vertex.
 	 * @param v Index of vertex in question.
 	 * @return List of indices of all vertices that are adjacent to v
