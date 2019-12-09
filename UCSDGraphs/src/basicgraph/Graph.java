@@ -264,6 +264,9 @@ public abstract class Graph {
 		System.out.println("Roads / intersections:");
 		GraphAdjMatrix graphFromFile = new GraphAdjMatrix();
 		GraphLoader.loadRoadMap("data/testdata/simpletest.map", graphFromFile);
+		graphFromFile.removeEdge(0, 1);
+		graphFromFile.removeEdge(1, 0);
+
 		System.out.println(graphFromFile);
 		
 		System.out.println("Observe all degrees are <= 12.");
@@ -276,6 +279,9 @@ public abstract class Graph {
 		System.out.println("Flight data:");
 		GraphAdjList airportGraph = new GraphAdjList();
 		GraphLoader.loadRoutes("data/airports/routesUA.dat", airportGraph);
+		airportGraph.removeEdge(8, 6);
+		airportGraph.removeEdge(6, 8);
+		airportGraph.removeEdge(1, 15);
 		System.out.println(airportGraph);
 		System.out.println("Observe most degrees are small (1-30), eight are over 100.");
 		System.out.println("****");
